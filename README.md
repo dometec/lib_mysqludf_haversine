@@ -23,8 +23,7 @@ Install
 To compile
 ----------
 
-    gcc -shared -fPIC -o lib_mysqludf_haversine.so lib_mysqludf_haversine.c $(mysql_config --cflags) \
-        -lm -DMYSQL_DYNAMIC_PLUGIN
+    gcc -O2 -shared -o lib_mysqludf_haversine.so lib_mysqludf_haversine.c $(mysql_config --cflags) -lm -DMYSQL_DYNAMIC_PLUGIN -Wall
 
 To register this function
 -------------------------

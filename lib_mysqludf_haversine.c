@@ -53,7 +53,7 @@
  * Follow this steps:
  *
  *		[1] - sudo vi /etc/apparmor.d/usr.sbin.mysqld
- *		[2] - add:  /usr/lib/mysql/plugin/** mr,
+ *		[2] - add:  /usr/lib/mysql/plugin/ ** mr,
  *		[3] - sudo /etc/init.d/apparmor restart
  *
  *	then register the function in MySQL
@@ -166,8 +166,7 @@ haversine_distance( UDF_INIT* initid, UDF_ARGS* args, char* is_null, char *error
 	/*Earth Radius in Kilometers.*/
 	double R = 6372.797560856;
 	
-	double DEG_TO_RAD = M_PI/180.0;
-	double RAD_TO_DEG = 180.0/M_PI;
+	double DEG_TO_RAD = M_PI/180.0; 
   
 	double lat1 = *(double*) args->args[0];
 	double lon1 = *(double*) args->args[1];
